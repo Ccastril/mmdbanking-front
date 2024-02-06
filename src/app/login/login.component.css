@@ -1,0 +1,64 @@
+#footerContainer {
+    background-color: rgb(234, 234, 234);
+    position:absolute;
+    bottom:0;
+    padding-top: 0px;
+    width:100%;
+    height: 5em;
+}
+#adContainer {
+    margin-left:8em;
+    padding:0;
+    padding-bottom:8em;
+    font-size:medium;
+    background-color: rgb(255, 247, 253) ;
+
+}
+#loginContainer {
+    padding-top:5em;
+    padding-bottom:8em;
+    margin-right:8em;
+}
+
+#loginRow {
+    margin-top:2em;
+    margin-bottom:2em;
+}
+
+#submitButtonContainer {
+    padding-top:1em;
+    margin-top: 1em;
+
+}
+#submitButton {
+    background-color: rgb(199, 121, 177);
+    color:white;
+    border-width:5px;
+    border-radius: 10px;
+    border-color:white;
+
+}
+#submitButton:hover {
+    background-color: rgb(170, 89, 147);
+    border-width:5px;
+    border-radius: 15px;
+    border-color:white;
+}
+
+#usernameGroup, #passwordGroup {
+    padding-top:2em;
+}
+
+#adText {
+    font-size:14em;
+    font-weight: bold;
+    
+}
+
+input, button {
+    font-size: 2em;
+}
+
+label {
+    font-size: 1.5em;
+}

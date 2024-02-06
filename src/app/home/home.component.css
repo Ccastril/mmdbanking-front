@@ -1,0 +1,11 @@
+/* #homeContainer{
+
+    margin-left: 75px;
+    margin-right: 0px;
+} */
+#imageContainer{
+    background-image: url("/assets/img/nyc.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    /* background-size:75em; */
+}

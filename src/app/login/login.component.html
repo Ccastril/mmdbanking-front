@@ -1,0 +1,39 @@
+<div class="row" id="loginRow">
+    <div class="col p-5 shadow rounded" id="adContainer">
+        
+        <p id="adText">5.1%*</p>
+        <h1>High Yield Savings Account Option</h1>
+        <p> * Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu non diam phasellus vestibulum lorem sed. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. Quis vel eros donec ac. Mi sit amet mauris commodo. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. In tellus integer feugiat scelerisque varius morbi enim nunc. Malesuada nunc vel risus commodo viverra maecenas. Suspendisse in est ante in nibh. Turpis egestas integer eget aliquet nibh praesent tristique magna sit. Turpis in eu mi bibendum neque egestas congue.</p>
+    </div>
+    <div class="col align-middle shadow bg-white rounded" id="loginContainer">
+        <div class="container text-center" id="loginFormContainer">
+            <h1>Sign In</h1>
+            <form>
+                <div class="form-group" id="usernameGroup">
+                    <label for="usernameInput">Username</label>
+                    <input type="text" [formControl]="usernameControl" id="usernameInput" class="form-control" placeholder="username"/>
+                </div>
+                <div class="form-group">
+                    <label for="passwordInput" id="passwordGroup">Password</label>
+                    <input type="password" [formControl]="passwordControl" id="passwordInput" class="form-control" placeholder="password" />
+                </div>
+                <div class="d-grid gap-2 col-12 mx-auto" id="submitButtonContainer">
+                    <button class="btn" type="button" id="submitButton" (click)="submitLogin()">Submit</button>
+                </div>
+                <div id="loginHelpText">
+                    <p><a class="link-primary"><small>Need help logging in?</small></a></p>
+                </div>
+                <div id="customerRegistrationText">
+                    <p><a class="link-primary">Sign up for online access</a></p>
+                </div>
+        
+            </form>
+        </div>
+    </div>
+</div>
+<div class="row" id="footerContainer">
+    <app-login-footer></app-login-footer>
+</div>
+<!-- <div class="row" id="footerContainer">
+    <p>This is the footer</p>
+</div> -->
