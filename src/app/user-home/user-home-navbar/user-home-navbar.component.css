@@ -1,0 +1,22 @@
+a{
+    font-size: 1.5em;
+    margin:20px;
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(254, 249, 255);
+    font-weight: bolder;
+}
+
+#links{
+    background-color: rgb(199, 121, 177);
+    text-align: left;
+    padding-top: 25px;
+    margin-right:50px;
+    width:100%;
+}
+p {
+   margin:20px;
+   color: rgb(0, 0, 0);
+}
