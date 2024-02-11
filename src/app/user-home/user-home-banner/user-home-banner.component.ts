@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-user-home-banner',
@@ -8,5 +8,16 @@ import { Component, Input } from '@angular/core';
   styleUrl: './user-home-banner.component.css'
 })
 export class UserHomeBannerComponent {
-  @Input() userFirstName = '';
+  @Input() userFullName = '';
+
+
+
+  ngOnInit() {
+    const element = document.getElementById('dateContainer');
+    if(element?.textContent) {
+      element.textContent = new Date().toString()
+    }
+
+  }
+
 }

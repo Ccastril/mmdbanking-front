@@ -1,27 +1,53 @@
 <app-user-home-navbar></app-user-home-navbar>
-<app-user-home-banner [userFirstName]="userFirstName" id="userHomeBanner"></app-user-home-banner>
-<div class="container-fluid">
+<app-user-home-banner [userFullName]="userFullName" id="userHomeBanner"></app-user-home-banner>
+<div class="container border rounded" id="tablesContainer">
     <div class="row">
-        <div class="col" id="accountsColumn">
+        <div class="col-12 p-5" id="accountsColumn">
             <h1>Accounts</h1>
-            <hr>
-            <table class="accountsTable">
-                <thead>  
-                    <tr>
-                        <th>Account Number</th>
-                        <th>Account Type</th>
-                        <th>Balance</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- <tr *ngFor="let item of dataArray">
-                        <td>{{item.accountNumber}}</td>
-                        <td>{{item.accountType}}</td>
-                        <td>{{item.balance}}</td>
-                        <td><button class="btn btn-default">view</button></td>
-                    </tr> -->
-                </tbody>
-            </table>
+            <!-- the account is the wrapper object -->
+            @for (account of accounts; track account.id ; let index = $index) {
+             <div class="row p-4 mb-4" id="accountTablesContainer">
+                <div class="d-flex" id="accountHeadingContainer">
+                    <div class="d-flex me-auto" id="accountTypeHeading">
+                        <h2>{{account.accountType + " : ****" + account.accountNumber.substring(4,8)}}</h2>
+                    </div>
+                    <div class="d-flex" id="viewAccountContainer">
+
+                        <button class="btn btn-primary" (click)="viewAccount(account)" #btn>
+
+                            {{selectedAccount && (selectedAccount.accountNumber === account.accountNumber) ? btnTextContent : 'View'}}
+
+                        </button>
+                    </div>
+                </div>
+
+                @if(selectedAccount && (selectedAccount.accountNumber === account.accountNumber)) {
+
+                <app-banking-account-details [selectedAccount]="selectedAccount"
+                    id="bankingAccountDetails"></app-banking-account-details>
+                }
+                <table class="table" id="accountsTables">
+                    <thead>
+                        <tr>
+                            <th>Last Transaction</th>
+                            <th>Amount</th>
+                            <th>CurrentBalance</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>some transaction</td>
+                            <td>some amount</td>
+                            <td>{{account.balance | currency:'USD':true:'1.2-2'}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+            }
         </div>
     </div>
 </div>
