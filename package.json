@@ -1,6 +1,7 @@
 {
   "name": "banking-app-front-b",
   "version": "0.0.0",
+  "description": "In-progress Java Spring Boot banking API prototype using MongoDB and layered controller/service/repository architecture.",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
